@@ -1,0 +1,14 @@
+@app.route('/csv_file', methods=['GET','POSST'])
+def index():
+  return render_template('index.html')
+
+@app.route('/data',methods=['GET','POSST'] )
+def data():
+  if request.method == 'post':
+    f = request.form['csvfile']
+    data = []
+    with open(f) as file:
+      csvfile = csv.reader(file)
+      for row in csvfile:
+        data.append(row)
+    return render_template('data.html',data=data)  

@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+
+<label for="avatar">Choose a CSV file:</label>
+<script type="text/javascript" src="/behavior.js"></script>
+<input type="file" id="csvFileInput" onchange="handleFiles(this.files)"
+  accept=".csv">
+
+
+  <div class="form-design">
+  <form action="" (submit)="onSubmit(form)" (reset)="onReset()" autocomplete="off">
+            <h1 class="filter-header">Tool To Test IAM Best Practices</h1>
+            
+        
+
